@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Foodee/static/css/main.ff0d14af.css",
-    "main.js": "/Foodee/static/js/main.bf7d6025.js",
+    "main.js": "/Foodee/static/js/main.09af46fc.js",
     "index.html": "/Foodee/index.html",
     "main.ff0d14af.css.map": "/Foodee/static/css/main.ff0d14af.css.map",
-    "main.bf7d6025.js.map": "/Foodee/static/js/main.bf7d6025.js.map"
+    "main.09af46fc.js.map": "/Foodee/static/js/main.09af46fc.js.map"
   },
   "entrypoints": [
     "static/css/main.ff0d14af.css",
-    "static/js/main.bf7d6025.js"
+    "static/js/main.09af46fc.js"
   ]
 }
