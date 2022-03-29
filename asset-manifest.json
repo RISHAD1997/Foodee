@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Foodee/static/css/main.ff0d14af.css",
+    "main.js": "/Foodee/static/js/main.bf7d6025.js",
+    "index.html": "/Foodee/index.html",
+    "main.ff0d14af.css.map": "/Foodee/static/css/main.ff0d14af.css.map",
+    "main.bf7d6025.js.map": "/Foodee/static/js/main.bf7d6025.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff0d14af.css",
+    "static/js/main.bf7d6025.js"
+  ]
+}
