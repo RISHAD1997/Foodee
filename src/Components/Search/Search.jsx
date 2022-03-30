@@ -37,16 +37,7 @@ function Search() {
                         value = {search}
                        />
 
-                        <FiSearch
-                            onClick={submitHandler}
-                            style={{
-                                position: 'absolute',
-                                top: '21%',
-                                right: '37%',
-                                color: '#fff',
-                                zindex: '10'
-                            }}
-                            />
+                        <CustomFiSearch onClick={submitHandler} />        
               
                 </SearchBox>
             </form>
@@ -61,5 +52,22 @@ display:flex;
 justify-content : center;
 align-items: center;
 `;
+
+const CustomFiSearch = styled(FiSearch)`
+    position: 'absolute';
+    top:21%;
+    right: 37%;
+    color: #fff;
+    z-index: 10;
+
+    @media only screen and (max-width : 600px) {
+        
+        position: relative;
+        right: 20%;
+        font-size: 1.5rem;
+        color: #fff;
+           
+    }
+`
 
 export default Search

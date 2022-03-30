@@ -1,13 +1,19 @@
-import React from 'react'
-import Nav from '../Components/Nav/nav'
-import Search from '../Components/Search/Search'
-import Trending from '../Components/Trending/Trending'
-import Veggie from '../Components/Veggie/Veggie'
-import Cuisine from '../Components/Cuisine/Cuisine'
+import React from 'react';
+import Nav from '../Components/Nav/nav';
+import Search from '../Components/Search/Search';
+import Trending from '../Components/Trending/Trending';
+import Veggie from '../Components/Veggie/Veggie';
+import Cuisine from '../Components/Cuisine/Cuisine';
+import {motion} from 'framer-motion';
 
 function Home() {
     return (
-        <div>
+        <motion.div
+            animate={{opacity: 1}}
+            initial={{opacity: 0}}
+            exit={{opacity:0}}        
+            transition={{duration:0.5}}
+        >
 
             <Nav/>
             <Search/>
@@ -15,7 +21,7 @@ function Home() {
             <Trending/>
             <Veggie/>
 
-        </div>
+        </motion.div>
 
     )
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 import { ImSpoonKnife } from "react-icons/im";
-import './nav.css'
 import { NavLink } from 'react-router-dom';
 
 function Nav() {
@@ -16,6 +15,7 @@ function Nav() {
 
 const Navbar = styled.div`
 padding:5px;
+margin-bottom:10px;
 `
 
 const Link = styled(NavLink) `

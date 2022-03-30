@@ -16,7 +16,7 @@ function Searched() {
 
        
             const api = await fetch(
-                `https://api.spoonacular.com/recipes/complexSearch?query=${name}&apiKey=be06133287624965964c053d84907e95&number=21`
+                `https://api.spoonacular.com/recipes/complexSearch?query=${name}&apiKey=be06133287624965964c053d84907e95&number=24`
             );
             const data = await api.json();
            
@@ -57,7 +57,7 @@ const Card = styled.div `
   border-radius: 2rem;
   position : relative;
   display: inline-block;
-  margin: 1.5rem;
+  margin: 1rem;
 
   p{
     position:absolute;
@@ -78,20 +78,39 @@ const Card = styled.div `
   img{
     position: relative;
       border-radius: 2rem;
-      width: 270px;
+      width: 230px;
       height: 255px;
   }
 
+  @media only screen and (max-width : 600px) {
+    margin-right: 1rem;
+    min-height: 10rem;
+    margin-left:25px ;
+    img{
+        width: 130px;
+      height: 150px;
+  }
+  p{
+        font-size:0.6rem;
+        bottom:40px;
+       }        
+ }
 `;
 
 const Gradient = styled.div `
   z-index:3;
   position: absolute;
-  bottom: 2%;
+  bottom: 1%;
   width:100%;
   height:100%;
   background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
   border-radius:2rem;
+
+  @media only screen and (max-width : 600px) {
+    height: 150px ;
+    bottom: 7%;
+           
+ } 
 `;
 
 const Link = styled(NavLink)`

@@ -16,18 +16,23 @@ function Trending() {
     const getPopular = async () => {
 
         const check = localStorage.getItem("popular");
-        if (check) {
+
+        if(check){
             setPopular(JSON.parse(check));
-        } else {
+        }else{
+
             const api = await fetch(
                 `https://api.spoonacular.com/recipes/random?apiKey=be06133287624965964c053d84907e95&number=9`
             );
             const data = await api.json();
-            localStorage.setItem("popular", JSON.stringify(data.recipes))
+           localStorage.setItem("popular", JSON.stringify(data.recipes))
             setPopular(data.recipes)
         }
+        
+           
+        }
 
-    }
+    
 
     return (
         <Trendings>
@@ -37,7 +42,7 @@ function Trending() {
                     options={{
                         perPage: 3,
                         arrows: false,
-                        gap: '4rem',
+                        gap: '1rem',
                         drag: "free",
                         pagination: false
                     }}>
@@ -65,6 +70,12 @@ function Trending() {
 
 const Trendings = styled.div `
   margin-top:2rem;
+
+  @media only screen and (max-width : 600px) {
+    margin-top: -20px;
+           
+ }
+
 `
 const Wrapper = styled.div `
   margin: 4rem 0rem;
@@ -72,6 +83,7 @@ const Wrapper = styled.div `
   h3{
     padding-bottom:10px;
   }
+
 `
 
 const Card = styled.div `
@@ -105,6 +117,20 @@ const Card = styled.div `
     justify-content:center;
     align-items:center;
   }
+
+  @media only screen and (max-width : 600px) {
+       img{
+          height: 160px;
+          
+       }
+
+       p{
+        font-size:0.6rem;
+        bottom:100px;
+       }
+    
+    }
+
 `;
 
 const Gradient = styled.div `
@@ -114,14 +140,21 @@ const Gradient = styled.div `
   height:100%;
   background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
   border-radius:2rem;
+
+  @media only screen and (max-width : 600px) {
+    height:160px;
+           
+ }
+    
 `
+
 
 const Link = styled(NavLink)`
     text-decoration: none;
     color: white;
     text-align: center;
     cursor: pointer;
-   `;
 
+   `
 
 export default Trending

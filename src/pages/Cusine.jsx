@@ -5,6 +5,7 @@ import {useParams} from 'react-router-dom';
 import Cuisine from '../Components/Cuisine/Cuisine';
 import Search from '../Components/Search/Search';
 import {NavLink} from 'react-router-dom';
+import {motion} from 'framer-motion';
 
 function Cusine() {
 
@@ -34,7 +35,12 @@ function Cusine() {
     }
 
     return (
-        <div>
+        <motion.div
+            animate={{opacity: 1}}
+            initial={{opacity: 0}}
+            exit={{opacity:0}}        
+            transition={{duration:0.5}}
+        >
             <Nav/>
             <Search />
             <Cuisine/> {
@@ -51,7 +57,7 @@ function Cusine() {
                     )
                 })
             }
-        </div>
+        </motion.div>
     )
 }
 
@@ -80,20 +86,39 @@ const Card = styled.div `
   }
   img{
       border-radius: 2rem;
-      width: 270px;
+      width: 230px;
       height: 250px;
   }
 
+  @media only screen and (max-width : 600px) {
+    margin-right: 1rem;
+    min-height: 10rem;
+    margin-left:25px ;
+    img{
+        width: 130px;
+      height: 150px;
+  }
+  p{
+        font-size:0.6rem;
+        bottom:40px;
+       }        
+ }
 `;
 
 const Gradient = styled.div `
   z-index:3;
   position: absolute;
   bottom: 1%;
-  width:270px;
-  height: 255px;
+  width:100%;
+  height: 100%;
   background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
   border-radius:2rem;
+
+  @media only screen and (max-width : 600px) {
+    height: 150px ;
+    bottom: 7%;
+           
+ } 
 `;
 
 const Link = styled(NavLink)`

@@ -14,11 +14,10 @@ function Veggie() {
     }, [])
 
     const getVeggie = async () => {
-
         const check = localStorage.getItem("veggie");
-        if (check) {
-            setVeggie(JSON.parse(check))
-        } else {
+        if(check){
+            setVeggie(JSON.parse(check));
+        }else{
             const api = await fetch(
                 `https://api.spoonacular.com/recipes/random?apiKey=be06133287624965964c053d84907e95&number=9&tags=vegetarian`
             );
@@ -26,6 +25,7 @@ function Veggie() {
             localStorage.setItem("veggie", JSON.stringify(data.recipes))
             setVeggie(data.recipes)
         }
+          
 
     }
 
@@ -37,7 +37,7 @@ function Veggie() {
                     options={{
                         perPage: 4,
                         arrows: false,
-                        gap: '4rem',
+                        gap: '1rem',
                         drag: "free",
                         pagination: false
                     }}>
@@ -65,6 +65,11 @@ function Veggie() {
 
 const Veggies = styled.div `
   margin-top:2rem;
+
+  @media only screen and (max-width : 600px) {
+    margin-top: -70px;
+           
+ }
 `
 const Wrapper = styled.div `
   margin: 4rem 0rem;
@@ -105,6 +110,19 @@ const Card = styled.div `
     justify-content:center;
     align-items:center;
   }
+
+  @media only screen and (max-width : 600px) {
+       img{
+          height: 160px;
+          
+       }
+
+       p{
+        font-size:0.6rem;
+        bottom:100px;
+       }
+    
+    }
 `;
 
 const Gradient = styled.div `
@@ -114,6 +132,11 @@ const Gradient = styled.div `
   height:100%;
   background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
   border-radius:2rem;
+
+  @media only screen and (max-width : 600px) {
+    height:160px;
+           
+ }
 `
 const Link = styled(NavLink)`
     text-decoration: none;
