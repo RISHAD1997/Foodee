@@ -54,11 +54,11 @@ align-items: center;
 `;
 
 const CustomFiSearch = styled(FiSearch)`
-    position: 'absolute';
-    top:21%;
+    position: absolute;
+    top:22%;
     right: 37%;
-    color: #fff;
-    z-index: 10;
+    color: #ffffff;
+   
 
     @media only screen and (max-width : 600px) {
         

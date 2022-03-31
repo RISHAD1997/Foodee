@@ -4,6 +4,7 @@ import Nav from '../Components/Nav/nav'
 import Search from '../Components/Search/Search'
 import {useParams} from 'react-router-dom';
 import {Row, Col , Button} from 'antd';
+import styled from 'styled-components';
 
 function Recipe() {
 
@@ -38,11 +39,16 @@ function Recipe() {
             <Cuisine/>
 
             <Row>
-                <Col span={12}>
+                
+                <Col xs={24} xl={12}>
+                    <Divder_1>
                     <h2>{recipe.title}</h2>
                     <img src={recipe.image} alt={recipe.title} style={{width:"70%"}}/>
+                    </Divder_1>
                 </Col>
-                <Col span={12}>
+
+                <Col xs={24} xl={12}>
+                <Divder_2>
                   <Button type={active ? "primary" : null} size={10} onClick={()=>setActive(true)} style={{marginRight:"1rem"}}>Ingredients</Button>
                   <Button type={active ? null : "primary" } size={10} onClick={()=>setActive(false)}>Description</Button>
                   {active ?  
@@ -65,12 +71,29 @@ function Recipe() {
                          </div>
                     }
                    
-                   
+                   </Divder_2>  
                 </Col>
             </Row>
 
         </div>
     )
 }
+
+const Divder_1 = styled.div `
+     @media only screen and (max-width : 600px) {
+        text-align: center;
+       
+  }
+    
+`;
+
+const Divder_2 = styled.div `
+     @media only screen and (max-width : 600px) {
+        margin: 10% 10%;
+       
+  }
+    
+`;
+
 
 export default Recipe
