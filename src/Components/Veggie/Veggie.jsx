@@ -65,6 +65,7 @@ function Veggie() {
 
 const Veggies = styled.div `
   margin-top:2rem;
+  padding-bottom: 2rem;
 
   @media only screen and (max-width : 600px) {
     margin-top: -70px;

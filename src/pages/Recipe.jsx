@@ -5,6 +5,7 @@ import Search from '../Components/Search/Search'
 import {useParams} from 'react-router-dom';
 import {Row, Col , Button} from 'antd';
 import styled from 'styled-components';
+import TopNavigateButton from '../Components/TopNavigateButton/TopNavigateButton';
 
 function Recipe() {
 
@@ -74,6 +75,8 @@ function Recipe() {
                    </Divder_2>  
                 </Col>
             </Row>
+
+            <TopNavigateButton />
 
         </div>
     )

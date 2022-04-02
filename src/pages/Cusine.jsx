@@ -6,6 +6,7 @@ import Cuisine from '../Components/Cuisine/Cuisine';
 import Search from '../Components/Search/Search';
 import {NavLink} from 'react-router-dom';
 import {motion} from 'framer-motion';
+import TopNavigateButton from '../Components/TopNavigateButton/TopNavigateButton';
 
 function Cusine() {
 
@@ -57,6 +58,7 @@ function Cusine() {
                     )
                 })
             }
+            <TopNavigateButton />
         </motion.div>
     )
 }

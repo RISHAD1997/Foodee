@@ -5,6 +5,7 @@ import Nav from '../Components/Nav/nav';
 import Search from '../Components/Search/Search';
 import Cuisine from '../Components/Cuisine/Cuisine';
 import {NavLink} from 'react-router-dom';
+import TopNavigateButton from '../Components/TopNavigateButton/TopNavigateButton';
 
 function Searched() {
 
@@ -48,6 +49,8 @@ function Searched() {
                     )
                 })
             }
+
+            <TopNavigateButton />
         </div>
     )
 }

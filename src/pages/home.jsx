@@ -5,6 +5,7 @@ import Trending from '../Components/Trending/Trending';
 import Veggie from '../Components/Veggie/Veggie';
 import Cuisine from '../Components/Cuisine/Cuisine';
 import {motion} from 'framer-motion';
+import TopNavigateButton from '../Components/TopNavigateButton/TopNavigateButton';
 
 function Home() {
     return (
@@ -20,6 +21,7 @@ function Home() {
             <Cuisine/>
             <Trending/>
             <Veggie/>
+            <TopNavigateButton />
 
         </motion.div>
 

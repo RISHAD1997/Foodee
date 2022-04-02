@@ -51,6 +51,7 @@ const SearchBox = styled.div `
 display:flex;
 justify-content : center;
 align-items: center;
+margin-left: 20px;
 `;
 
 const CustomFiSearch = styled(FiSearch)`
