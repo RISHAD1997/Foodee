@@ -16,3 +16,12 @@ input[type="text"]{
         margin: 10% 10%;
     }
  }
+
+ @media only screen and (min-width: 601px) and (max-device-width: 1024px){
+    input[type="text"]{
+        width: 100%;
+        margin: 5%;
+        text-align: center;
+        
+    }
+ }

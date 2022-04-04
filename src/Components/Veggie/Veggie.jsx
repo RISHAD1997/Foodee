@@ -4,7 +4,6 @@ import {Splide, SplideSlide} from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import {NavLink} from 'react-router-dom';
 
-
 function Veggie() {
 
     const [veggie, setVeggie] = useState([]);
@@ -15,9 +14,9 @@ function Veggie() {
 
     const getVeggie = async () => {
         const check = localStorage.getItem("veggie");
-        if(check){
+        if (check) {
             setVeggie(JSON.parse(check));
-        }else{
+        } else {
             const api = await fetch(
                 `https://api.spoonacular.com/recipes/random?apiKey=be06133287624965964c053d84907e95&number=9&tags=vegetarian`
             );
@@ -25,7 +24,6 @@ function Veggie() {
             localStorage.setItem("veggie", JSON.stringify(data.recipes))
             setVeggie(data.recipes)
         }
-          
 
     }
 
@@ -45,7 +43,7 @@ function Veggie() {
                         veggie.map((recipes) => {
                             return (
                                 <SplideSlide key={recipes.id}>
-                                    <Link to={'/Recipe/'+recipes.id}>
+                                    <Link to={'/Recipe/' + recipes.id}>
                                         <Card>
                                             <p>{recipes.title}</p>
                                             <img src={recipes.image} alt={recipes.title}/>
@@ -69,7 +67,7 @@ const Veggies = styled.div `
 
   @media only screen and (max-width : 600px) {
     margin-top: -70px;
-           
+    padding-bottom: 0;       
  }
 `
 const Wrapper = styled.div `

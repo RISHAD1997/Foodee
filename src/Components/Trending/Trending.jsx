@@ -4,7 +4,6 @@ import {Splide, SplideSlide} from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import {NavLink} from 'react-router-dom';
 
-
 function Trending() {
 
     const [popular, setPopular] = useState([]);
@@ -17,22 +16,19 @@ function Trending() {
 
         const check = localStorage.getItem("popular");
 
-        if(check){
+        if (check) {
             setPopular(JSON.parse(check));
-        }else{
+        } else {
 
             const api = await fetch(
                 `https://api.spoonacular.com/recipes/random?apiKey=be06133287624965964c053d84907e95&number=9`
             );
             const data = await api.json();
-           localStorage.setItem("popular", JSON.stringify(data.recipes))
+            localStorage.setItem("popular", JSON.stringify(data.recipes))
             setPopular(data.recipes)
         }
-        
-           
-        }
 
-    
+    }
 
     return (
         <Trendings>
@@ -50,7 +46,7 @@ function Trending() {
                         popular.map((recipes) => {
                             return (
                                 <SplideSlide key={recipes.id}>
-                                    <Link to={'/Recipe/'+recipes.id}>
+                                    <Link to={'/Recipe/' + recipes.id}>
                                         <Card>
                                             <p>{recipes.title}</p>
                                             <img src={recipes.image} alt={recipes.title}/>
@@ -147,7 +143,6 @@ const Gradient = styled.div `
  }
     
 `
-
 
 const Link = styled(NavLink)`
     text-decoration: none;

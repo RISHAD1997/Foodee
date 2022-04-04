@@ -38,7 +38,6 @@ function Search() {
                        />
 
                         <CustomFiSearch onClick={submitHandler} />        
-              
                 </SearchBox>
             </form>
         </div>
@@ -68,6 +67,12 @@ const CustomFiSearch = styled(FiSearch)`
         font-size: 1.5rem;
         color: #fff;
            
+    }
+
+    @media only screen and (min-width: 601px) and (max-device-width: 1024px){
+        position: relative;
+        right: 12%;
+        font-size: 1.5rem;
     }
 `
 
